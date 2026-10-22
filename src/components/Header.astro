@@ -1,0 +1,123 @@
+
+<header class="fixed top-0 left-0 z-50 w-full border-b border-blue-200 bg-[#EAF2FC] shadow-sm">
+  <nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
+
+    <!-- Logotipo -->
+    <a href="/" class="flex items-center">
+      <img
+        src="/logo-rcode.png"
+        alt="RCode Systems"
+        class="h-16 w-auto object-contain"
+      />
+    </a>
+
+    <!-- Menú de navegación para computadora -->
+    <div class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
+      <a href="#inicio" class="text-slate-700 hover:text-blue-600">Inicio</a>
+      <a href="#servicios" class="text-slate-700 hover:text-blue-600">Servicios</a>
+      <a href="#nosotros" class="text-slate-700 hover:text-blue-600">Nosotros</a>
+      <a href="#proceso" class="text-slate-700 hover:text-blue-600">Cómo trabajamos</a>
+    </div>
+
+    <!-- Botón del menú móvil -->
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-controls="menu-mobile"
+      aria-expanded="false"
+      class="rounded-lg p-2 text-blue-950 md:hidden"
+    >
+      <!-- Ícono hamburguesa -->
+      <svg
+        id="icon-menu"
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+
+      <!-- Ícono cerrar -->
+      <svg
+        id="icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        class="hidden"
+      >
+        <path d="M18 6 6 18M6 6l12 12" />
+      </svg>
+    </button>
+
+  </nav>
+
+  <!-- Menú para celulares -->
+  <div
+    id="menu-mobile"
+    class="hidden border-t border-slate-200 bg-white px-6 py-5 md:hidden"
+  >
+    <div class="flex flex-col gap-5">
+      <a href="#inicio" class="text-slate-700">Inicio</a>
+      <a href="#servicios" class="text-slate-700">Servicios</a>
+      <a href="#nosotros" class="text-slate-700">Nosotros</a>
+      <a href="#proceso" class="text-slate-700">Cómo trabajamos</a>
+      <a href="#contacto" class="font-semibold text-blue-900">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const boton = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu-mobile");
+  const iconMenu = document.getElementById("icon-menu");
+  const iconClose = document.getElementById("icon-close");
+
+  if (boton && menu && iconMenu && iconClose) {
+
+    function actualizarMenu(abierto: boolean) {
+      menu!.classList.toggle("hidden", !abierto);
+      iconMenu!.classList.toggle("hidden", abierto);
+      iconClose!.classList.toggle("hidden", !abierto);
+
+      boton!.setAttribute("aria-expanded", String(abierto));
+      boton!.setAttribute(
+        "aria-label",
+        abierto ? "Cerrar menú" : "Abrir menú"
+      );
+    }
+
+    boton.addEventListener("click", () => {
+      const estaAbierto = boton.getAttribute("aria-expanded") === "true";
+      actualizarMenu(!estaAbierto);
+    });
+
+    // Cerrar menú al seleccionar una sección
+    menu.querySelectorAll("a").forEach((enlace) => {
+      enlace.addEventListener("click", () => {
+        actualizarMenu(false);
+      });
+    });
+
+    // Cerrar menú al presionar Escape
+    document.addEventListener("keydown", (evento) => {
+      if (evento.key === "Escape") {
+        actualizarMenu(false);
+      }
+    });
+  }
+</script>

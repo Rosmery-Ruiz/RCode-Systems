@@ -1,0 +1,99 @@
+
+---
+import {
+  Globe,
+  Monitor,
+  Smartphone,
+  ChartNoAxesColumnIncreasing,
+  Settings
+} from "@lucide/astro";
+
+const servicios = [
+  {
+    titulo: "Desarrollo Web",
+    descripcion: "Creamos sitios web corporativos, sistemas web personalizados y plataformas de gestión adaptadas a tu negocio.",
+    icono: Globe
+  },
+  {
+    titulo: "Sistemas de Escritorio",
+    descripcion: "Desarrollamos software a medida, sistemas administrativos y soluciones para mejorar la gestión empresarial.",
+    icono: Monitor
+  },
+  {
+    titulo: "Aplicaciones Móviles",
+    descripcion: "Desarrollamos aplicaciones para Android y iOS, personalizadas e integradas con los procesos de tu negocio.",
+    icono: Smartphone
+  },
+  {
+    titulo: "Soluciones en Excel",
+    descripcion: "Creamos herramientas para inventarios, ventas, planillas, reportes y automatización de procesos con VBA.",
+    icono: ChartNoAxesColumnIncreasing
+  },
+  {
+    titulo: "Soluciones Informáticas",
+    descripcion: "Ofrecemos asesoría tecnológica, digitalización de procesos, automatización y acompañamiento técnico.",
+    icono: Settings
+  }
+];
+---
+
+<section id="servicios" class="bg-slate-50 py-12 sm:py-14">
+  <div class="mx-auto max-w-7xl px-6">
+
+    <!-- Encabezado -->
+    <div class="mb-9 text-center sm:mb-12">
+
+      <span class="text-xs font-semibold uppercase tracking-widest text-blue-600 sm:text-sm">
+        QUÉ HACEMOS
+      </span>
+
+      <h2 class="mt-4 text-3xl font-bold text-blue-950 sm:text-4xl">
+        Nuestros servicios
+      </h2>
+
+      <p class="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
+        Soluciones tecnológicas diseñadas para impulsar el crecimiento de tu negocio.
+      </p>
+
+    </div>
+
+    <!-- Tarjetas de servicios -->
+    <div class="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-6">
+
+      {servicios.map((servicio, index) => {
+        const Icono = servicio.icono;
+
+        return (
+          <div
+            class:list={[
+              "group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-xl sm:p-8 lg:col-span-2",
+              { "lg:col-start-2": index === 3 }
+            ]}
+          >
+
+            <!-- Ícono -->
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 transition-colors group-hover:bg-blue-600 sm:mb-6">
+              <Icono
+                size={28}
+                strokeWidth={1.8}
+                class="text-blue-600 transition-colors group-hover:text-white"
+              />
+            </div>
+
+            <!-- Título -->
+            <h3 class="mb-3 text-lg font-bold text-blue-950 sm:text-xl">
+              {servicio.titulo}
+            </h3>
+
+            <!-- Descripción -->
+            <p class="text-sm leading-7 text-slate-600 sm:text-base">
+              {servicio.descripcion}
+            </p>
+
+          </div>
+        );
+      })}
+
+    </div>
+  </div>
+</section>

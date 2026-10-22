@@ -1,46 +1,28 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
+# RCode Systems
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Sitio web informativo desarrollado para un negocio dedicado a ofrecer servicios tecnológicos y soluciones informáticas.
 
-## 🚀 Project Structure
+## Descripción
 
-Inside of your Astro project, you'll see the following folders and files:
+Página web desarrollada para RCode Systems, un negocio enfocado en el desarrollo de software y servicios informáticos. Su objetivo es presentar los servicios disponibles y facilitar el contacto con posibles clientes.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Secciones
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- Inicio
+- Servicios
+- Nosotros
+- Cómo trabajamos
+- Contacto
 
-## 🧞 Commands
+## Tecnologías utilizadas
 
-All commands are run from the root of the project, from a terminal:
+- Astro
+- HTML
+- CSS
+- Tailwind CSS
+- JavaScript
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Sobre el proyecto
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El sitio web fue desarrollado para presentar los servicios de un negocio, utilizando un diseño moderno, sencillo y adaptable a diferentes dispositivos.

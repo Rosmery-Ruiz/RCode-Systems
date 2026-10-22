@@ -1,23 +1,36 @@
+
+---
+import '../styles/global.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>RCode Systems | Soluciones Tecnológicas</title>
 	</head>
-	<body>
-		<slot />
-	</body>
+<body class="pt-[80px]">
+  <slot />
+</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  section[id] {
+    scroll-margin-top: 110px;
+  }
 </style>

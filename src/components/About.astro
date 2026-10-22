@@ -1,0 +1,135 @@
+
+---
+import { Target, ShieldCheck, Lightbulb } from "@lucide/astro";
+---
+
+<section id="nosotros" class="bg-white">
+
+  <!-- PRESENTACIÓN DE LA EMPRESA -->
+  <div class="relative mx-auto max-w-7xl overflow-hidden">
+
+    <!-- Imagen integrada al fondo en computadora -->
+    <div class="absolute inset-0 hidden lg:block">
+      <img
+        src="/empresa-nosotros.png"
+        alt=""
+        class="absolute inset-y-0 right-0 h-full w-[55%] object-cover object-center"
+        loading="lazy"
+      />
+
+      <!-- Transición suave -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white from-[38%] via-white/95 via-[48%] to-transparent to-[75%]"
+      ></div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 flex items-center px-6 py-12 sm:px-8 sm:py-14 lg:px-6">
+
+      <div class="max-w-[540px]">
+
+        <span class="text-xs font-semibold uppercase tracking-widest text-blue-600 sm:text-sm">
+          CONÓCENOS
+        </span>
+
+        <h2 class="mt-4 text-3xl font-bold text-blue-950 sm:text-4xl">
+          ¿Quiénes somos?
+        </h2>
+
+        <p class="mt-5 text-sm leading-7 text-slate-600 sm:text-base">
+          En RCode Systems desarrollamos soluciones tecnológicas
+          orientadas a emprendedores, pequeñas empresas y
+          organizaciones que buscan optimizar sus procesos.
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+          Creemos que toda empresa, sin importar su tamaño,
+          merece acceso a tecnología práctica, accesible y
+          adaptada a sus necesidades.
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+          Nuestro compromiso es ofrecer soluciones confiables,
+          modernas y de calidad, acompañando a nuestros
+          clientes en cada etapa de sus proyectos.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Imagen para celulares y tabletas -->
+    <div class="lg:hidden">
+      <img
+        src="/empresa-nosotros.png"
+        alt="Equipo empresarial trabajando con tecnología"
+        class="h-56 w-full object-cover object-center sm:h-72 md:h-80"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+
+  <!-- POR QUÉ ELEGIRNOS -->
+  <div class="bg-slate-50 pt-12 pb-8 sm:pt-14 sm:pb-8">
+
+    <div class="mx-auto max-w-7xl px-6">
+
+      <h3 class="mb-8 text-center text-2xl font-bold text-blue-950 sm:mb-10 sm:text-3xl">
+        ¿Por qué elegirnos?
+      </h3>
+
+      <div class="grid gap-5 sm:gap-6 md:grid-cols-3">
+
+        <!-- Personalización -->
+        <div class="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg sm:p-8">
+
+          <Target size={32} class="mb-5 text-blue-600" />
+
+          <h4 class="text-lg font-bold text-blue-950 sm:text-xl">
+            Soluciones personalizadas
+          </h4>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+            Nos adaptamos a las necesidades y presupuesto de cada cliente.
+          </p>
+
+        </div>
+
+        <!-- Calidad -->
+        <div class="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg sm:p-8">
+
+          <ShieldCheck size={32} class="mb-5 text-blue-600" />
+
+          <h4 class="text-lg font-bold text-blue-950 sm:text-xl">
+            Calidad y compromiso
+          </h4>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+            Desarrollamos cada proyecto con responsabilidad
+            y atención a los detalles.
+          </p>
+
+        </div>
+
+        <!-- Innovación -->
+        <div class="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg sm:p-8">
+
+          <Lightbulb size={32} class="mb-5 text-blue-600" />
+
+          <h4 class="text-lg font-bold text-blue-950 sm:text-xl">
+            Tecnología e innovación
+          </h4>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+            Utilizamos tecnologías actuales para ofrecer
+            soluciones modernas y funcionales.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
